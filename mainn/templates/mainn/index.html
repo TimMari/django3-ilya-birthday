@@ -1,0 +1,47 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="top">
+        <div class="logo">
+            {% for el in img %}
+            <img src="{{ el.photo.url }}">
+            {% endfor %}
+        </div>
+        <div class="name">
+            <p>Спортивно-развлекательный канал <span>Килька</span></p>
+        </div>
+    </div>
+</header>
+<div class="content">
+    <div class="menu">
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Про меня</a></li>
+            <li><a href="{% url 'video' %}">Видео</a></li>
+            <li><a href="{% url 'blog' %}">Мой блог</a></li>
+        </ul>
+    </nav>
+    </div>
+    <div class="info">
+        {% for el in info %}
+        <p>{{ el.title }}</p>
+        <p>{{ el.text }}</p>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

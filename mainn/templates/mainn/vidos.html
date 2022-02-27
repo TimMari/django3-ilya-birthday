@@ -1,0 +1,79 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Мои видео</title>
+    <link rel="stylesheet" href="{% static 'css/vidos.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="top">
+        <p>Видео на моем канале</p>
+    </div>
+</header>
+
+<div class="content">
+        <nav>
+            <ul>
+                <a href="{% url 'index' %}"><button>На главную</button></a>
+                        <a href="{% url 'blog' %}"><button>Блог</button></a>
+                <li><h2>Спорт</h2>
+                <ul class="sport">
+                    <li>
+                        {% for el in vid %}
+                        <h3>{{ el.title }}</h3>
+                        <a href="{{ el.url }}" target="_blank">Ссылка на это видео в YouTube</a>
+                        {% if el.video %}
+                        <video>
+                            <source src="{{ el.video.url }}">
+                        </video>
+                        {% endif %}
+                        {% endfor %}
+                    </li>
+                </ul>
+                </li>
+                <li><h2>Игры</h2>
+                <ul>
+                    <li>
+                        {% for el in game %}
+                        <h3>{{ el.title }}</h3>
+                        <a href="{{ el.url }}" target="_blank">Ссылка на это видео в YouTube</a>
+                        {% if el.video %}
+                        <video>
+                            <source src="{{ el.video.url }}">
+                        </video>
+                        {% endif %}
+                        {% endfor %}
+                    </li>
+                </ul>
+                </li>
+                <li><h2>Другое</h2>
+                <ul>
+                    <li>
+                        {% for el in other %}
+                        <h3>{{ el.title }}</h3>
+                        <a href="{{ el.url }}" target="_blank">Ссылка на это видео в YouTube</a><br>
+                        {% if el.video %}
+                        <video controls height="150px" width="130px">
+                            <source src="{{ el.video.url }}">
+                        </video>
+                        {% endif %}
+                        {% endfor %}
+                    </li>
+                </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+.name p {
+font-size:25px;
+color:#0710fa;
+font-family: 'Lobster', cursive;
+}
+
+.name p span{
+font-weight:bold;
+color:#b222f5;
+
+}
+body{
+background:#7dfa7a;
+}
+
+
+.top{
+border-radius:10px;
+display:flex;
+justify-content: center;
+text-align: center;
+background: linear-gradient(#7dfad4, #5afaa5);
+
+}
+
+.name {
+
+
+}
+
+.logo img{
+height:120px;
+width:90px;
+border:2px solid blue;
+border-radius: 10px;
+margin:0;
+
+}
+.menu{
+border:1px solid;
+border-radius:20px;
+background:blue;
+}
+
+.menu nav ul{
+display:flex;
+background:#fcf644;
+justify-content:center;
+
+}
+
+.menu nav ul li {
+text-decoration:none;
+list-style-type:none;
+flex-basis:100%;
+text-align:center;
+
+}
+
+.menu nav ul li:last-child{
+
+}
+
+
+
+.menu nav ul li a{
+font-size:19px;
+text-decoration:none;
+font-weight: bold;
+}
+
+.info{
+margin:0 auto;
+width:80%;
+}
+
+.info p:first-child{
+font-size:25px;
+font-family: 'Press Start 2P', cursive;
+color:#1405b3;
+}
+
+.info p:last-child{
+font-size:20px;
+font-family: 'Reggae One', cursive;
+color:#8c0776;
+}
+
+.content{
+background:linear-gradient(#7afac5, #7dfa7a);
+}
+

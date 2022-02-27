@@ -1,0 +1,54 @@
+.top {
+display:flex;
+justify-content:center;
+background: linear-gradient(#a1fa48, #66fabc);
+}
+
+.top p{
+color:red;
+font-size: 23px;
+
+font-family: 'Rubik Beastly', cursive;
+}
+
+ul {
+margin:0 auto;
+}
+
+nav  ul  li{
+text-decoration:none;
+list-style-type:none;
+flex-basis:100%;
+margin:0;
+justify-content: center;
+}
+
+
+.content  {
+background: linear-gradient(#a1fa48, #66fabc);
+margin:0 auto;
+border:1px solid white;
+}
+
+h2{
+color:red;
+}
+
+button{
+background:#f8fc03;
+font-size:15px;
+font-weight:bold;
+padding:5px;
+color:green;
+border-radius:7px;
+flex-basis:100%;
+}
+
+a{
+font-size:18px;
+text-decoration:none;
+}
+
+h2{
+font-family: 'Train One', cursive;
+}
